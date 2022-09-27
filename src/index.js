@@ -14,6 +14,9 @@ var VERBS = [
   "list",
   "link",
   "unlink",
+  "connect",
+  "trace",
+  "copy",
 ];
 
 function adapter() {

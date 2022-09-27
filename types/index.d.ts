@@ -74,6 +74,9 @@ declare class MockAdapter {
   onAny: RequestMatcherFunc;
   onLink: RequestMatcherFunc;
   onUnlink: RequestMatcherFunc;
+  onConnect: RequestMatcherFunc;
+  onTrace: RequestMatcherFunc;
+  onCopy: RequestMatcherFunc;
 }
 
 export default MockAdapter;

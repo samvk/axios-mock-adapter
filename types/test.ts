@@ -51,6 +51,9 @@ namespace SupportsAllHttpVerbs {
   mock.onList;
   mock.onLink;
   mock.onUnlink;
+  mock.onConnect;
+  mock.onTrace;
+  mock.onCopy;
 }
 
 namespace SupportsAnyVerb {

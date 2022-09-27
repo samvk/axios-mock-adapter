@@ -57,6 +57,9 @@ describe("MockAdapter basics", function () {
     expect(mock.onList).to.be.a("function");
     expect(mock.onLink).to.be.a("function");
     expect(mock.onUnlink).to.be.a("function");
+    expect(mock.onConnect).to.be.a("function");
+    expect(mock.onTrace).to.be.a("function");
+    expect(mock.onCopy).to.be.a("function");
   });
 
   it("mocks requests", function () {
@@ -591,6 +594,9 @@ describe("MockAdapter basics", function () {
       instance.head("/barfoo").then(anyResponseTester),
       instance.delete("/foo/bar").then(anyResponseTester),
       instance.patch("/bar/foo").then(anyResponseTester),
+      instance.connect("/bar/foo").then(anyResponseTester),
+      instance.trace("/bar/foo").then(anyResponseTester),
+      instance.copy("/bar/foo").then(anyResponseTester),
     ]);
   });
 

@@ -25,6 +25,9 @@ describe("MockAdapter onAny", function () {
     expect(mock.handlers["list"]).not.to.be.empty;
     expect(mock.handlers["link"]).not.to.be.empty;
     expect(mock.handlers["unlink"]).not.to.be.empty;
+    expect(mock.handlers["connect"]).not.to.be.empty;
+    expect(mock.handlers["trace"]).not.to.be.empty;
+    expect(mock.handlers["copy"]).not.to.be.empty;
   });
 
   it("mocks any request with a matching url", function () {
