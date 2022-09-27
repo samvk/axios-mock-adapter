@@ -22,7 +22,7 @@ function transformRequest(data) {
 }
 
 function makeResponse(result, config) {
-  return {
+  const response = {
     status: result[0],
     data: transformRequest(result[1]),
     headers: result[2],
@@ -31,6 +31,9 @@ function makeResponse(result, config) {
       responseURL: config.url,
     },
   };
+  const errorStatus = [4, 5].includes(`${response.status}`.charAt(0));
+  console[errorStatus ? 'error' : 'log'](`[Mock response] ${config.method.toUpperCase()} ${config.url} ${response.status}`, response);
+  return response;
 }
 
 function handleRequest(mockAdapter, resolve, reject, config) {
